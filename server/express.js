@@ -3,8 +3,11 @@ import path from 'path'
 import cookieParser from 'cookie-parser'
 import compress from 'compression'
 import cors from 'cors'
-
 import helmet from 'helmet'
+
+import models from './models/index';
+import routes from './routes/IndexRoute';
+
 
 const app = express()
 
@@ -32,8 +35,11 @@ app.use("/hr/api/v1/test", (req, res) => {
 
 // #middleware
 app.use(async (req, res, next) => {
+    req.context = {models};
     next();
 });
+
+app.use('/api/regions', routes.regionRoute);
 
 
 // Catch unauthorised errors
