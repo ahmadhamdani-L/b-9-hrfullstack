@@ -17,3 +17,5 @@ sequelize.sync({ force: dropDatabaseSync }).then(async () => {
         console.info('Server started on port %s.', config.port),
     );
 });
+
+export default app;
