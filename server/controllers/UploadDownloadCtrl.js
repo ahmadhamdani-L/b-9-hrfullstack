@@ -28,12 +28,8 @@ const upload = async (req, res,next) => {
         })
         .on('end', () => {
             console.log('-> upload to storage done');
-<<<<<<< HEAD
-            res.send("File Uploaded Successfully"); 
-=======
             next();
             //res.send("File Uploaded Successfully");
->>>>>>> day02
         });
 }
 
