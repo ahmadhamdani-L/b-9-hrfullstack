@@ -26,7 +26,7 @@ const upload = async (req, res) => {
         })
         .on('end', () => {
             console.log('-> upload to storage done');
-            res.send("File Uploaded Successfully");
+            res.send("File Uploaded Successfully"); 
         });
 
     form.parse(req);
