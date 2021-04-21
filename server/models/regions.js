@@ -25,6 +25,11 @@ const regions = (sequelize, DataTypes)=> {
       },
     ]
   });
+  // create join 
+  Regions.associate = models => {
+    Regions.hasMany(models.Countries, { foreignKey: 'region_id', onDelete: 'CASCADE' });
+  };
+
   return Regions;
 };
 

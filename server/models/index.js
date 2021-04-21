@@ -1,9 +1,11 @@
-import regions from './regions';
 import Sequelize from 'sequelize';
 import { sequelize } from '../../config/config-db';
+import regions from './regions';
+import countries from './countries';
 
 const models = {
     Regions: regions(sequelize, Sequelize),
+    Countries: countries(sequelize, Sequelize),
 }
 
 //4. create relation OneToMany | ManyToMany
