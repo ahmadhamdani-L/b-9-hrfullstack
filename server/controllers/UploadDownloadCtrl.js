@@ -1,6 +1,6 @@
 import formidable from 'formidable';
 import fs from 'fs';
-import { nextTick } from 'process';
+
 
 //1.declare pathDir untuk menyimpan image di local storage
 const pathDir = __dirname + '../../../uploads/';
