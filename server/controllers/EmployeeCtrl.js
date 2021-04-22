@@ -8,6 +8,9 @@ const update = async (req, res) => {
 }
 
 const create = async (req, res,next) => {
+    // jika gunakan spread operator
+    const dataEmployee = req.dataEmployee;
+
     const {fields,files} = req.dataFiles;
     
     
