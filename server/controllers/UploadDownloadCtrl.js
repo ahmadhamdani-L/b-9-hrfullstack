@@ -58,8 +58,11 @@ const uploadMultipart = async (req,res,next)=>{
             fields.push({ keyName, value });
         })
         .on('file', (keyName, file) => {
+            console.log(file);
             const fileName = file.name;
-            files.push({ keyName, fileName });
+            const fileSize = file.size;
+            const fileType = file.type;
+            files.push({ keyName, fileName,fileSize,fileType });
         })
         .on('end', () => {
             console.log('-> upload to storage done');
